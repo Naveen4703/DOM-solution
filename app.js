@@ -8,9 +8,19 @@ let users = [
 ]
 
 function findUser(){
-    let name = document.getElementById('num').value;
+   let name = document.getElementById('num').value;
     let result = users.filter((users) => name == users.firstName?users.salary:'');
     document.getElementById('userName').innerHTML =  result[0].firstName + ' '+ result[0].lastName;
-    document.getElementById('userSalary').innerHTML = result[0].salary;
-  
+    document.getElementById('userSalary').innerHTML = result[0].salary; 
+   
+    //We can also do this using for loop & if condition :)
+/* 
+     let length = users.length;
+     for (i=0;i<length;i++){
+        if(name == users[i].firstName){
+              document.getElementById('userName').innerHTML = users[i].firstName + ' '+users[i].lastName ;
+              document.getElementById('userSalary').innerHTML = users[i].salary;
+        }
+    }
+*/  
 }
