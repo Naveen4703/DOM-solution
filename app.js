@@ -9,7 +9,7 @@ let users = [
 
 function findUser(){
    let name = document.getElementById('num').value;
-    let result = users.filter((users) => name == users.firstName?users.salary:'');
+    let result = users.filter((users) => name == users.firstName?users:'');
     document.getElementById('userName').innerHTML =  result[0].firstName + ' '+ result[0].lastName;
     document.getElementById('userSalary').innerHTML = result[0].salary; 
    
